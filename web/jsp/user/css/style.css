@@ -6561,7 +6561,7 @@ table th {
 /* Products
 /*-------------------------------------------------------*/
 .product-item {
-  margin-bottom: 50px; }
+ height:470px; }
 
 .product-img img {
   overflow: hidden;
@@ -6758,7 +6758,7 @@ table th {
 /* Filter
 -------------------------------------------------------*/
 .shop-filter {
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
   width: 100%;
   float: left; }
 
@@ -8222,5 +8222,8 @@ abbr.required {
     padding-bottom: 130px; }
   .pb-xsm-140 {
     padding-bottom: 140px; } }
-
+#abc{
+    
+    display: none !important;
+}
 /*# sourceMappingURL=style.css.map */

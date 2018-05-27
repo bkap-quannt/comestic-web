@@ -1,25 +1,10 @@
-<%-- 
-    Document   : index
-    Created on : Feb 1, 2018, 8:27:41 PM
-    Author     : Tuan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <title>Cosmetic | Home</title>
         <jsp:include page="header.jsp"/>
     </head>
     <body class="relative grid-1440">
-
-        <!-- Preloader -->
-        <div class="loader-mask">
-            <div class="loader">
-                <div></div>
-                <div></div>
-            </div>
-        </div>
 
         <main class="main-wrapper oh">
 
@@ -383,7 +368,7 @@
                                     data-title="Creative Minimalism">
 
                                     <!-- MAIN IMAGE -->
-                                    <img src="../jsp/user/img/revolution/transparent.png"
+                                    <img src="../jsp/user/img/../jsp/user/transparent.png"
                                          alt=""
                                          data-bgposition="center center"
                                          data-bgrepeat="no-repeat"
@@ -400,7 +385,7 @@
                                          data-transform_idle="o:1;s:900;"
                                          data-transform_in="x:-100;opacity:0;s:1000;e:Power3.easeOut;"
                                          data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
-                                         data-start="1000"><img src="../jsp/user/img/revolution/milan_slide_1.jpg" alt="" />
+                                         data-start="1000"><img src="../jsp/user/img/../jsp/user/milan_slide_1.jpg" alt="" />
                                     </div>
 
                                     <!-- LINE -->
@@ -514,7 +499,7 @@
                                     data-title="Creative Minimalism">
 
                                     <!-- MAIN IMAGE -->
-                                    <img src="../jsp/user/img/revolution/transparent.png"
+                                    <img src="../jsp/user/img/../jsp/user/transparent.png"
                                          alt=""
                                          data-bgposition="center center"
                                          data-bgrepeat="no-repeat"
@@ -531,7 +516,7 @@
                                          data-transform_idle="o:1;s:900;"
                                          data-transform_in="x:100px;opacity:0;s:1000;e:Power3.easeOut;"
                                          data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
-                                         data-start="1000"><img src="../jsp/user/img/revolution/milan_slide_2.jpg" alt="" />
+                                         data-start="1000"><img src="../jsp/user/img/../jsp/user/milan_slide_2.jpg" alt="" />
                                     </div>
 
                                     <!-- LINE -->
@@ -645,7 +630,7 @@
                                     data-title="Creative Minimalism">
 
                                     <!-- MAIN IMAGE -->
-                                    <img src="../jsp/user/img/revolution/milan_slide_3.jpg"
+                                    <img src="../jsp/user/img/../jsp/user/milan_slide_3.jpg"
                                          alt=""
                                          data-bgposition="center center"
                                          data-bgrepeat="no-repeat"
@@ -1083,20 +1068,20 @@
         <script type="text/javascript" src="../jsp/user/js/jquery.min.js"></script>
         <script type="text/javascript" src="../jsp/user/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../jsp/user/js/plugins.js"></script>
-        <script type="text/javascript" src="../jsp/user/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/../jsp/user/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/jquery.themepunch.../jsp/user.min.js"></script>
         <script type="text/javascript" src="../jsp/user/js/rev-slider.js"></script>
         <script type="text/javascript" src="../jsp/user/js/scripts.js"></script>
 
 
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.video.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.carousel.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.actions.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.migration.min.js"></script>
+        <script type="text/javascript" src="../jsp/user/js/extensions/../jsp/user.extension.parallax.min.js"></script>
     </body>
 </html>
