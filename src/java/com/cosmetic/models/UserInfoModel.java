@@ -52,6 +52,20 @@ public class UserInfoModel {
         session.close();
         return userInfo;
     }
+    
+    public String getUserInfoByUserId(int userId) {
+        List<UserInfo> userInfos = new ArrayList<UserInfo>();
+        Session session = sessionFactoryUserInfo.getCurrentSession();
+        session.beginTransaction();
+        // creating query
+        Query query = session.createQuery("from UserInfo where userId = :id");
+        query.setParameter("id", userId);
+        // Getting list of userInfos
+        userInfos = query.setMaxResults(1).list();
+        String image = userInfos.get(0).getImage();
+        session.close();
+        return image;
+    }
 
     public boolean insertUserInfo(UserInfo userInfo) {
         boolean check = false;
@@ -74,11 +88,9 @@ public class UserInfoModel {
         newUserInfo.setBankAccountName("ahihi");
         newUserInfo.setCityTown(userInfo.getCityTown());
         newUserInfo.setContry("VietNam");
-        newUserInfo.setBirthDay(userInfo.getBirthDay());
+        newUserInfo.setBirthYear(userInfo.getBirthYear());
         DateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         Calendar calendar = Calendar.getInstance();
-//        newUserInfo.setBirthDay(simpleDateFormat.format(calendar.getTime()));
-        newUserInfo.setBirthYear(simpleDateFormat.format(calendar.getTime()));
         newUserInfo.setCreated(simpleDateFormat.format(calendar.getTime()));
         newUserInfo.setDeleted(simpleDateFormat.format(calendar.getTime()));
         newUserInfo.setModified(simpleDateFormat.format(calendar.getTime()));

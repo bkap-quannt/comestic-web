@@ -40,13 +40,8 @@ public class UserModel {
         return users;
     }
 
-    public boolean checkLogin(User user) {
-        boolean result = false;
-        User newUser = getUserByUserNameAndPassword(user.getUserName(), user.getPassword());
-        if (newUser != null) {
-            result = true;
-        }
-        return result;
+    public User checkLogin(User user) {
+        return getUserByUserNameAndPassword(user.getUserName(), user.getPassword());
     }
     
     public User getUserByUserNameAndPassword(String userName, String password) {

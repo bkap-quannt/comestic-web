@@ -78,11 +78,15 @@ public class BackendController {
         ModelAndView model;
         model = new ModelAndView("admin/category");
         List<Category> listCategory = categoryModel.getAllCategory();
-        model.getModelMap().put("listCategory", listCategory);
+//        model.getModelMap().put("listCategory", listCategory);
         int limit = 5;
         int range = 3;
         int totalPage = listCategory.size() / limit;
-        int currentPage = Integer.parseInt(page);
+        int currentPage = 0;
+        String page1 = request.getParameter("page");
+        if(page1 != null) {
+            currentPage = Integer.parseInt(page1);
+        }
         if(currentPage == 0) {
             currentPage = 1;
         }
@@ -95,17 +99,30 @@ public class BackendController {
         
         int currentSection = Common.getCurrentSection(currentPage, range);
         int totalSection = Common.getTotalSection(totalPage, range);
-        model.addObject("currentSection", currentSection);
-        model.addObject("totalSection", totalSection);
+        model.getModelMap().put("currentSection", currentSection);
+        model.getModelMap().put("totalSection", totalSection);
         
         List<Integer> getListPage = Common.getListPage(totalPage, currentPage, range);
         model.addObject("getListPage", getListPage);
         
         int minPageSection = getListPage.get(0);
         int maxPageSection = getListPage.get(getListPage.size() - 1);
-        model.addObject("minPageSection", minPageSection);
-        model.addObject("maxPageSection", maxPageSection);
-        model.addObject("currentPage", currentPage);
+        model.getModelMap().put("minPageSection", minPageSection);
+        model.getModelMap().put("maxPageSection", maxPageSection);
+        model.getModelMap().put("currentPage", currentPage);
+        
+        int offset = (currentPage > 0) ? limit * ((int)currentPage - 1) : 0;
+        List<Category> categories = new ArrayList<Category>();
+        categories =  categoryModel.getAllCategoryPage(offset, limit);
+        model.getModelMap().put("listCategory", categories);
+
+//        int start = (currentPage > 0) ? (int)((currentPage - 1) * limit) : 0;
+//        int end = start + limit;
+//        List<Category> categories = new ArrayList<Category>();
+//        for(int i=start; i<end; i++) {
+//            categories.add(listCategory.get(i));
+//        }
+//        model.getModelMap().put("listCategory", categories);
         return model;
     }
 

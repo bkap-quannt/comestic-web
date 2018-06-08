@@ -2,6 +2,29 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
     <jsp:include page="head1.jsp"></jsp:include>
+    <link href="../jsp/user/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="../jsp/admin/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="../jsp/admin/css/dataTables.jqueryui.css" rel="stylesheet" type="text/css"/>
+    <link href="../jsp/admin/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../jsp/admin/css/datatables.min.css" rel="stylesheet" type="text/css"/>
+    <script src="../jsp/admin/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/jquery.dataTables.bootstrap.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/jquery.dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/dataTables.jqueryui.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/datatables.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../jsp/admin/js/count.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#product').dataTable({
+                "pagingType": "full_numbers",
+                "lengthMenu": [[5, 10, 20, -1], [5, 10, 20, "All"]],
+            });
+        });
+    </script>
         <body class="hold-transition skin-blue sidebar-mini">
             <div class="wrapper">
                 <jsp:include page="header1.jsp"></jsp:include>

@@ -5,7 +5,6 @@
  */
 package com.cosmetic.models;
 
-import com.cosmetic.entities.Category;
 import com.cosmetic.entities.Order;
 import com.cosmetic.entities.Orderdetail;
 import com.cosmetic.entities.Product;
@@ -19,7 +18,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import javax.servlet.http.HttpSession;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -233,7 +231,7 @@ public class ProductModel {
         return products;
     }
 
-    public List<Provider> getAllTags() {
+    public List<Provider> getAllProviders() {
         List<Provider> providers = new ArrayList<Provider>();
         Session session = sessionFactoryProvider.getCurrentSession();
         session.beginTransaction();

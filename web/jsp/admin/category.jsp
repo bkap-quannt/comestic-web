@@ -75,8 +75,8 @@
                         </div>
                     </section>
                     <!-- /.content -->
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered" cellspacing="0">
+                    <div>
+                        <table class="table table-striped table-bordered" cellspacing="0" style="width: 10px;">
                             <tr>
                                 <c:if test="${minPageSection > 0}">
                                     <c:if test="${currentSection > 1}">

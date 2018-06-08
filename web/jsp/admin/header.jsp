@@ -33,7 +33,7 @@
 
                 <li class="light-blue">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <img class="nav-user-photo" src="../jsp/user/img/user.jpg" alt="Jason's Photo" />
+                        <img class="nav-user-photo" src="../jsp/user/img/user.jpg" alt="Quan Photo" />
                         <span class="user-info">
                             <small>Xin chào</small>
                             <%=request.getSession().getAttribute("user")%>

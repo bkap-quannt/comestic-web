@@ -20,7 +20,7 @@ public class Common {
      * @return type boolean
      */
     public static  boolean check(HttpSession session){
-        if(session.getAttribute("user") != null){
+        if(session.getAttribute("userName") != null){
             return true;
         } else {
             return false;

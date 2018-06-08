@@ -39,11 +39,11 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label visible-ie8 visible-ie9">Birth Day</label>
+        <label class="control-label visible-ie8 visible-ie9">Birth Year</label>
         <div class="controls">
             <div class="input-icon left">
                 <i class="icon-font"></i>
-                <f:input class="m-wrap placeholder-no-fix" type="text" placeholder="Birth Day" name="birthDay" path="userInfo.birthDay" />
+                <f:input class="m-wrap placeholder-no-fix" type="text" placeholder="Birth Year" name="birthYear" path="userInfo.birthYear" />
             </div>
         </div>
     </div>

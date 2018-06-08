@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <header class="main-header">
 
@@ -218,8 +219,10 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="../jsp/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Quân</span>
+                        <%--<c:if test="${userName != null}">--%>
+                            <img src="../jsp/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">${userName}</span>
+                        <%--</c:if>--%>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->

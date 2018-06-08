@@ -4,13 +4,15 @@
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
-            <div class="pull-left image">
-                <img src="../jsp/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-            </div>
-            <div class="pull-left info">
-                <p>Quân</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
+            <!--<c:if test="${userName != null}">-->
+                <div class="pull-left image">
+                    <img src="../jsp/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>${userName}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            <!--</c:if>-->
         </div>
         <!-- search form -->
         <form action="./search.htm" method="get" class="sidebar-form">

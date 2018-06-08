@@ -155,8 +155,8 @@ public class ProductController {
         return model;
     }
     
-    @RequestMapping(value = "productTag")
-    public ModelAndView getProductTag(@RequestParam("providerId") int providerId) {
+    @RequestMapping(value = "productProvider")
+    public ModelAndView getProductProvider(@RequestParam("providerId") int providerId) {
         ModelAndView model = new ModelAndView("user/product");
         List<Product> listProduct = productModel.getProductByProviderId(providerId); // danh sách sản phẩm cùng nhà phân phối
         model.addObject("listProduct", listProduct);
@@ -172,12 +172,12 @@ public class ProductController {
 //        List<Color> listColor = colorAndSizeModel.getAllColor();//danh sách màu sắc hiển thị cho phần lọc theo màu sắc
 //        List<Size> listSize = colorAndSizeModel.getAllSize(); // danh sách size của sảm phẩm
         List<Category> listCategory = categoryModel.getCategoryRoot(); // danh sách các loại catalog của các sản phẩm
-        List<Provider> listTag = productModel.getAllTags(); // danh sách các thương hiệu
+        List<Provider> listProvider = productModel.getAllProviders(); // danh sách các thương hiệu
         model.addObject("listProductHot", listProductHot);
         model.addObject("listCategory", listCategory);
 //        model.addObject("listColor", listColor);
 //        model.addObject("listSize", listSize);
-        model.addObject("listTag", listTag);
+        model.addObject("listProvider", listProvider);
         model.addObject("listProduct", listProduct);
         return model;
     }
@@ -206,9 +206,9 @@ public class ProductController {
     private void sidebar(ModelAndView model) {
         List<Product> listProductHot = productModel.getProductHot();// danh sách sản phâm nổi bật
         List<Category> listCategory = categoryModel.getCategoryRoot(); // danh sách các loại catalog của các sản phẩm
-        List<Provider> listTag = productModel.getAllTags(); // danh sách các thương hiệu
+        List<Provider> listProvider = productModel.getAllProviders(); // danh sách các thương hiệu
         model.addObject("listProductHot", listProductHot);
         model.addObject("listCategory", listCategory);
-        model.addObject("listTag", listTag);
+        model.addObject("listProvider", listProvider);
     }
 }

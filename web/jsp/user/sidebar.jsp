@@ -100,9 +100,9 @@
 
     <!-- Tags -->
     <div class="widget tags clearfix">
-        <h3 class="widget-title heading uppercase relative bottom-line full-grey">Tags</h3>
-        <c:forEach items="${listTag}" var="tag">
-            <a href="productTag.htm?providerId=${tag.providerId}">${tag.providerName}</a>
+        <h3 class="widget-title heading uppercase relative bottom-line full-grey">Provider</h3>
+        <c:forEach items="${listProvider}" var="provider">
+            <a href="productProvider.htm?providerId=${provider.providerId}">${provider.providerName}</a>
         </c:forEach>
     </div>
 

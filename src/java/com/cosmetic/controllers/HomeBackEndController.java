@@ -7,7 +7,6 @@ package com.cosmetic.controllers;
 
 import com.cosmetic.entities.CreateAccount;
 import com.cosmetic.entities.User;
-import com.cosmetic.entities.UserInfo;
 import com.cosmetic.models.OrderModel;
 import com.cosmetic.models.UserInfoModel;
 import com.cosmetic.models.UserModel;
@@ -77,10 +76,10 @@ public class HomeBackEndController {
      */
     @RequestMapping(value = "backendLogin")
     public String loginBackend(@ModelAttribute("user") User user, ModelMap mm, HttpSession session){
-        boolean result = false;
-        result = userModel.checkLogin(user);
-        if(result){
-            session.setAttribute("user", user.getUserName());
+        User result = userModel.checkLogin(user);
+        if(result != null){
+            session.setAttribute("userName", user.getUserName());
+            session.setAttribute("userId", user.getUserId());
             return "redirect: homeBackend.htm";
         } else {
             mm.put("message", "Sai thông tin đăng nhập.");
@@ -103,8 +102,13 @@ public class HomeBackEndController {
             model = new ModelAndView("admin/index1");
             long totalUser = userModel.getTotalUser();
             long totalOrder = orderModel.getTotalOrder();
+            String uId = (String)session.getAttribute("userId");
+            int userId = Integer.parseInt(uId);
+            String image = userInfoModel.getUserInfoByUserId(userId);
             model.getModelMap().put("totalUser", totalUser);
             model.getModelMap().put("totalOrder", totalOrder);
+            model.getModelMap().put("userName", (String)session.getAttribute("userName"));
+            model.getModelMap().put("image", image);
             return model;
         } else {
             model = new ModelAndView("admin/login1");

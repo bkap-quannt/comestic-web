@@ -33,9 +33,6 @@ public class UserInfo {
     @Column(name = "user_mail")
     private String userMail;
     
-    @Column(name = "birthday")
-    private String birthDay;
-    
     @Column(name = "birth_year")
     private String birthYear;
     
@@ -63,9 +60,12 @@ public class UserInfo {
     @Column(name = "contry")
     private String contry;
     
+    @Column(name = "image")
+    private String image;
+    
     public UserInfo() {}
 
-    public UserInfo(int userInfoId, int userId, String fullName, String tel, String userMail, String birthDay, String birthYear, 
+    public UserInfo(int userInfoId, int userId, String fullName, String tel, String userMail, String image, String birthYear, 
             String address, String created, String modified, String deleted, String bankAccountNumber, 
             String bankAccountName, String cityTown, String contry) {
         this.userInfoId = userInfoId;
@@ -73,7 +73,7 @@ public class UserInfo {
         this.fullName = fullName;
         this.tel = tel;
         this.userMail = userMail;
-        this.birthDay = birthDay;
+        this.image = image;
         this.birthYear = birthYear;
         this.address = address;
         this.created = created;
@@ -125,12 +125,12 @@ public class UserInfo {
         this.userMail = userMail;
     }
 
-    public String getBirthDay() {
-        return birthDay;
+    public String getImage() {
+        return image;
     }
 
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
+    public void setImage(String image) {
+        this.image = image;
     }
     
     public String getBirthYear() {

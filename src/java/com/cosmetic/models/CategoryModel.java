@@ -36,6 +36,20 @@ public class CategoryModel {
         session.close();
         return categories;
     }
+    
+    public List<Category> getAllCategoryPage(int offset, int limit) {
+        List<Category> categories = new ArrayList<Category>();
+        Session session = sessionFactoryCategory.getCurrentSession();
+        session.beginTransaction();
+        // creating query
+        Query query = session.createQuery("from Category ORDER BY categoryId");
+        query.setFirstResult(offset);
+        query.setMaxResults(limit);
+        // Getting list of categories
+        categories = query.list();
+        session.close();
+        return categories;
+    }
 
     public List<Category> getCategoryRoot() {
         List<Category> categories = new ArrayList<Category>();
